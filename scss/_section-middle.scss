@@ -1,0 +1,76 @@
+.section-middle {
+    margin-top: -8rem;
+    background: rgb(243, 243, 243);
+
+    h3 {
+        color: $darkBlue;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: $grayishBlue;
+        width: 55%;
+        font-size: 1rem;
+    }
+
+    &-content {
+
+        img {
+            width: 25%;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        p {
+            margin-top: 1.2rem;
+            font-size: 0.97rem;
+            width: 100%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .section-middle {
+        h3 {
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 7rem;
+            text-align: center;
+        }
+
+        p {
+            margin: 0 auto;
+            margin-top: 2rem;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        &-content {
+            text-align: center;
+
+            img {
+                padding-top: 0 !important;
+                width: 30%;
+            }
+
+            h3 {
+                margin-top: 0;
+                font-size: 1.5rem;
+            }
+
+            p {
+                text-align: center;
+                align-items: center;
+                font-size: 1.1rem;
+                
+            }
+        }
+    }
+        
+}

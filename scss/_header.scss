@@ -1,0 +1,122 @@
+.header {
+    &-menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-nav {
+        ul {
+            display: flex;
+
+            li {
+                margin-right: 2rem;
+
+                a {
+                    font-size: 1rem;
+                    color: $grayishBlue;
+                    transition: color 0.5s;
+                    padding-bottom: 2rem;
+
+                    &:hover {
+                        color: $darkBlue;
+                        text-align: center;
+                        align-items: center;
+                        border-bottom: 4px solid $limeGreen;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .header  {
+        margin-bottom: 10px;
+        &-menu {
+                .navbar-toggle .bar {
+                    width: 25px;
+                    height: 3px;
+                    margin: 5px auto;
+                    transition: all 0.3s ease-in-out;
+                    background: #111;
+                    cursor: pointer;
+                    display: block;
+                }
+
+            #mobile-menu {
+                position: absolute;
+                top: 4%;
+                right: 7%;
+                transition: translate(5%, 20%);
+                cursor: pointer;
+
+                &.is-active .bar:nth-child(2) {
+                    opacity: 0;
+                }
+            
+                &.is-active .bar:nth-child(1) {
+                    transform: translateY(8px) rotate(45deg);
+                }
+            
+                &.is-active .bar:nth-child(3) {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+            }
+        }
+
+
+        &-nav {
+            ul {
+                li {
+                    padding-bottom: 0.8rem;
+
+                    a {
+                        font-size: 1.5rem;
+
+                        &:hover {
+                            border: none;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .navbar-menu {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            width: 100%;
+            position:  absolute;
+            top: -1000px;
+            opacity: 1;
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+
+        .navbar-menu.active {
+            padding-top: 10%;
+            background: $darkBlue;
+            top: 18%;
+            right: 15%;
+            width: 80%;
+            padding-right: 120px;
+            padding-left: 120px;
+            opacity: 1;
+            transition: all 0.5s ease;
+            z-index: 99;
+            height: 50vh;
+            font-size: 1.6rem;
+        }
+
+        &-btn {
+            display: none;
+        }
+    }
+}
+
+
+
+
